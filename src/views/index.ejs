@@ -6,6 +6,9 @@
     </h1>
     <a href="/profile">Profile</a>
 </div>
+<%  accounts.forEach(function(account) { %>
+    <%- include('summary', {account: account.checking, account.savings, account.credit}) %>
+ <% });  %>
 <br>
 <a href="/transfer"> Transfer </a>
 

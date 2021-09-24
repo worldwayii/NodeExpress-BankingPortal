@@ -9,8 +9,15 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+const accountData =JSON.parse(fs.readFileSync( path= '/src/json/accounts.json',  encoding= 'UTF8' ));
+const accounts = accountData;
+
 app.get('/', function(req, res){
-    res.render('index', {title: 'Index'});
+    res.render('index', {title: 'Account Summary', account: accounts });
 });
 
-app.listen(3000, ()=>{ console.log('PS Project running on port 3000!')});
+
+const userData =JSON.parse(fs.readFileSync( path= '/src/json/accounts.json',  encoding= 'UTF8' ));
+const users = userData;
+
+app.listen(3000, () => { console.log('PS Project running on port 3000!')});
