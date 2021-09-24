@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const ejs = require('ejs');
+const assert = require('assert');
 
 describe('Create `profile` view', () => {
   it('should create the profile view @profile-ejs-create-view', () => {

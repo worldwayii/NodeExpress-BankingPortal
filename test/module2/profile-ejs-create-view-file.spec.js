@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const assert = require('assert');
 
 describe('`profile.ejs` exists', () => {
   it('`profile.ejs` should exist  @profile-ejs-create-view-file', () => {
