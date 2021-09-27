@@ -9,24 +9,29 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const accountData = JSON.parse(fs.readFileSync('/src/json/accounts.json', {encoding:'utf8', flag:'r'}));
+const accountData = JSON.parse(fs.readFileSync('src/json/accounts.json', {encoding:'utf8', flag:'r'}));
 const accounts = accountData;
 
 app.get('/', function(req, res){
-    res.render('index', {title: 'Account Summary', account: accounts });
+    res.render('index', {title: 'Account Summary', accounts: accounts });
 });
+
+const userData = JSON.parse(fs.readFileSync('src/json/users.json', {encoding:'utf8', flag:'r'}));
+const users = userData;
+
 app.get('/savings', function(req, res){
-    res.render('account', {title: 'Savings Summary', account: accounts.savings });
+    res.render('account', {account: accounts.savings });
+});
+app.get('/checking', function(req, res){
+    res.render('account', {account: accounts.checking });
 });
 app.get('/credit', function(req, res){
-    res.render('account', {title: 'Credit Summary', account: accounts.credit });
+    res.render('account', {account: accounts.credit });
 });
 app.get('/profile', function(req, res){
-    res.render('profile', {title: 'Profile Summary', user: users[0] });
+    res.render('profile', {user: users[0] });
 });
 
 
-const userData = JSON.parse(fs.readFileSync('/src/json/accounts.json', {encoding:'utf8', flag:'r'}));
-const users = userData;
 
 app.listen(3000, () => { console.log('PS Project running on port 3000!')});
