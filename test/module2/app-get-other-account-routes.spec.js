@@ -6,6 +6,7 @@ describe('Checking and Credit Routes', () => {
   let checkingStack;
   let creditHandleSpy;
   let checkingHandleSpy;
+  
 
   before(() => {
     creditStack = routeStack('/credit', 'get') || routeStack('/account/credit', 'get');
