@@ -35,13 +35,11 @@ app.post('/transfer', (req, res) => {
 app.get('/payment', (req, res) => res.render('payment', {account:accounts.credit}));
 app.post('/payment', (req, res) =>{
     accounts.credit.balance -= res.body.amount;
-    accounts.credit.available += paerseInt(req.body.amount);
+    accounts.credit.available += parseInt(req.body.amount);
     accountsJSON = JSON.stringify(accounts, null, 4);
     fs.writeFileSync(path.join(__dirname, 'json', 'accounts.json'), accountsJSON, 'utf8');
     res.render({ message: 'Payment Successful', account: accounts.credit });
 });
-
-
 
 
 app.listen(3000, () => { console.log('PS Project running on port 3000!')});
