@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const rewire = require('rewire');
-const assert = require('assert');
 
 describe('writeJSON function in data.js', () => {
   it('`data.js` should include a writeJSON function @data-js-write-json-function', () => {

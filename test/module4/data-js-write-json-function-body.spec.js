@@ -1,8 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const rewire = require('rewire');
-const assert = require('assert');
-const sinon = require('sinon');
 
 describe('writeJSON function', () => {
   let writeFileSyncStub;
