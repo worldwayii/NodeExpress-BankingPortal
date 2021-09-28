@@ -1,8 +1,9 @@
-const app = express();
 const fs = require('fs');
 const path = require('path');
+
 const express = require('express');
-const { root } = require('cheerio');
+const app = express();
+
 const {accounts, users, writeJson} = require('./data');
 
 app.set('views', path.join(__dirname, 'views'));
