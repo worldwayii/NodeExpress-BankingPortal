@@ -1,5 +1,6 @@
 const R = require('ramda');
 const rewire = require('rewire');
+const assert = require('assert');
 
 describe('Read user data from `data.js`', () => {
   it('`data.js` should read user data @data-js-transition-const-users', () => {

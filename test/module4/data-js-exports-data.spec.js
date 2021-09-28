@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const assert = require('assert');
 
 describe('`data.js` exports', () => {
   it('`data.js` should export an object @data-js-exports-data', () => {

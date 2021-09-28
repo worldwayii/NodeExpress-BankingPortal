@@ -1,4 +1,5 @@
 const rewire = require('rewire');
+const assert = require('assert');
 
 describe('Require `fs` and `path` built-ins in data.js', () => {
   it('`data.js` should contain requires @data-js-require-built-ins', () => {
