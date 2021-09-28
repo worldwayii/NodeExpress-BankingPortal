@@ -1,12 +1,11 @@
 const R = require('ramda');
-const assert = require('assert');
+const sinon = require('sinon');
 
 describe('Checking and Credit Routes', () => {
   let creditStack;
   let checkingStack;
   let creditHandleSpy;
   let checkingHandleSpy;
-  
 
   before(() => {
     creditStack = routeStack('/credit', 'get') || routeStack('/account/credit', 'get');
