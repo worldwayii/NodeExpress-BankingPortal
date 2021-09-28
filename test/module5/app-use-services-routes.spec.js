@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const proxyquire = require('proxyquire');
+const assert = require('assert');
 
 describe('App uses services routes', () => {
   let useSpy;

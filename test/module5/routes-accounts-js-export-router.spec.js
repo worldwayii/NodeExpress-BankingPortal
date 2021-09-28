@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const assert = require('assert');
 
 describe('`accounts.js` exports', () => {
   it('`accounts.js` should export router @routes-accounts-js-export-router', () => {

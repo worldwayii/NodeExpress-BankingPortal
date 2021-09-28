@@ -18,4 +18,4 @@ router.post('/payment', (req, res) => {
     res.render('payment', {message: 'Payment Successful', account: accounts.credit});
 });
 
-module.exports = {router};
+module.exports = router;

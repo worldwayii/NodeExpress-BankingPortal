@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const ejs = require('ejs');
+const assert = require('assert');
 const cheerio = require('cheerio');
 
 describe('Update views', () => {

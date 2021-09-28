@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const rewire = require('rewire');
+const assert = require('assert');
 
 describe('Require `data.js` - services', () => {
   it('should contain `services` const @routes-services-js-require-data', () => {

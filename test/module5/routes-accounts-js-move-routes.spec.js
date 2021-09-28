@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const R = require('ramda');
+const assert = require('assert');
 const rewire = require('rewire');
 
 describe('Move account routes', () => {

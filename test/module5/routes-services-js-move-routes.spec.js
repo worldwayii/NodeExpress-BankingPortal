@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const R = require('ramda');
 const rewire = require('rewire');
+const assert = require('assert');
 
 describe('Move services routes', () => {
   it('`services.js` should contain routes @routes-services-js-move-routes', () => {

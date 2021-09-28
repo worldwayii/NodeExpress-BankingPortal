@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const rewire = require('rewire');
+const assert = require('assert');
 
 describe('Require Express and Create Router - accounts', () => {
   it('require express and create app const @routes-accounts-js-require-express', () => {

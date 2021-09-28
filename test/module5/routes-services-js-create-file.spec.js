@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const assert = require('assert');
 
 describe('`src/routes/services.js` exists', () => {
   it('`src/routes/services.js` should exist  @routes-services-js-create-file', () => {
